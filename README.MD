@@ -1,4 +1,4 @@
-# Redux Rest Reducer
+# Rest Reducer for Redux
 
 ### Make sure your project has these peer dependencies
 ```json
