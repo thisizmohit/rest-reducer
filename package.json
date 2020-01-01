@@ -1,6 +1,6 @@
 {
   "name": "redux-rest-reducer",
-  "version": "0.5.0",
+  "version": "0.6.3",
   "description": "Restfull reducer for redux",
   "main": "./distribution/index.js",
   "module": "distribution/index.js",
@@ -8,12 +8,20 @@
   "author": "Sandeep Gunduboyina <sandeepgy11@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "uuid": "^3.3.2",
-    "query-string": "^6.2.0"
+    "query-string": "^6.2.0",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "@cuemath/eslint-config": "1.0.5",
+    "@cuemath/prettier-config": "1.0.0",
+    "babel-eslint": "10.0.1",
     "babel-loader": "^8.0.4",
     "babel-preset-react-app-babel-7": "^4.0.2-0",
+    "eslint": "5.6.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "4.2.0",
+    "lint-staged": "8.1.6",
+    "prettier": "1.17.1",
     "rollup": "^0.68.0",
     "rollup-plugin-babel": "^4.1.0",
     "rollup-plugin-commonjs": "^9.2.0",
@@ -24,6 +32,8 @@
     "test": "jest --watch",
     "lint": "eslint test",
     "build": "BABEL_ENV=production rollup -c",
-    "prepublish": "yarn run build"
+    "buildwatch": "BABEL_ENV=production rollup -c -w",
+    "precommit": "lint-staged",
+    "prepublishOnly": "yarn run build"
   }
 }

@@ -1,6 +1,9 @@
 {
-  "extends": "airbnb",
+  "extends": "@cuemath",
   "env": {
     "jest": true
+  },
+  "globals": {
+    "fetch": true
   }
 }
